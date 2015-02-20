@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<r:content_for name="main"> 
+<section class="main-content"> 
+		<div class="container"> 
+			
+			<div class="page-title"> 
+				<h1> <r:page:name /> </h1> 
+			</div> 
+				
+			<div class="breadcrumb"> 
+				<r:breadcrumbs ul_class="breadcrumbs" />
+			</div>  
+			
+		</div> 
+		<div class="container"> 
+			<ul class="faculty-profiles"> 
+			<r:children:each> 
+				<li class="faculty-member">
+					<div class="photo"><a href="<r:page:url />"> <r:page:content name="faculty-photo" /> </a></div>
+					<h2> <r:page:content name="faculty-name" /> </h2> 
+					<h3> <r:page:content name="faculty-position" /> </h3> 
+					<p>  <span class="fa fa-phone-square"> </span> <r:page:content name="faculty-phone" /> </p> 
+					<p>  <span class="fa fa-map-marker"> </span> <r:page:content name="faculty-address" /> </p> 
+					<p>  <span class="fa fa-envelope-o"> </span> <r:page:content name="faculty-email" /> </p> 
+					<div> <a href="<r:page:url />" class="button"> View Full Profile </a> </div> 
+				</li>  
+			</r:children:each> 
+		
+		</div> 
+</section> 
+</r:content_for> 

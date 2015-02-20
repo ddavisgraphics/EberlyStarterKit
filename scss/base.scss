@@ -1,0 +1,21 @@
+//	BY: DAVID J. DAVIS DEC 2014
+//  CREATED FOR ECAS 
+//  HTML 5 BOILERPLATE CUSTOMIZED
+//  Bourbon and Bourbon Neat 
+//  University Relations Attached CSS Main File
+//------------------------------------------------
+//------------------------------------------------
+
+// Bourbon Neat and Bourbon Framework
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+// Normalize File that sets the default browsers functions to look somewhat normal instead of removing them all like the reset does.  
+@import "_normalize.scss";
+
+// Typography
+@import "_typography.scss";
+
+// Custom Styles 
+@import "_main.scss";
+

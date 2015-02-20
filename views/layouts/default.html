@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <r:comment><!-- meta charset gets set automatically by CleanSlate --></r:comment>
+    
+    <title><r:page:first_non_blank_attr names="title, name" /> | <r:site_name /> | West Virginia University</title>
+    <meta name="description" content="<r:page:meta_description />" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<r:comment><!--  UR Style Sheets --></r:comment>
+		<link href="https://stash.development.wvu.edu/projects/CST/repos/code/browse/stylesheets/global-stylesheet/5.0/stylesheets/global.css?at=refs%2Fheads%2Fmaster"/> 
+    <r:comment><!--  UR Style Sheets --></r:comment>
+    	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    	<link href="//cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/flexslider-min.css" rel="stylesheet"/>
+    <r:comment><!--  Cleanslate CSS --></r:comment>
+   		<r:include_stylesheet name="base" />
+    
+    <r:comment><!-- Modernizer and Respond JS For IE --></r:comment>
+    <r:include_javascript name="vendor/modernizr-2.6.2-respond-1.1.0.min"/> 
+
+  </head>
+  <body class="template-<r:page:template:name /> page-<r:page:id />">
+
+	<r:comment><!-- Headers and Mastheads --></r:comment>
+    <r:partial name="layouts/masthead--v1" theme="Code" />
+    <r:partial name="eberlybar" /> 
+    
+    <r:comment><!-- Banner Decoration --></r:comment>
+    <div class="bg-image"> 
+		<img src="https://cleanslate.wvu.edu/files/c321c5fd-9e38-48e1-a940-5d7e30bbb30c" alt="decorative background image" />
+	</div> 
+    
+    <r:comment><!-- Site Title and Action Buttons --></r:comment>
+	<r:partial name="header"/>
+
+	
+	<r:comment><!-- Site Navigation --></r:comment>
+	<nav class="wrapper">
+			<div class="nav-toggle"> 
+				<a href="#"><i class="fa fa-bars"></i> Menu   </a> 
+			</div> 
+			<r:site_menu ul_class="container" max_depth="1" active_class="active" open_class="open" />
+		</nav>
+		
+	<r:comment><!-- Slider for the top of the homepage --></r:comment>
+    
+    <r:yield name="page_slider">
+  		<r:content />
+	</r:yield>
+	
+	
+	<r:comment><!-- main Content Yeild --></r:comment>
+	<r:yield name="main">
+		<r:content/> 
+	</r:yield> 
+	
+
+	<r:comment><!-- Default Footer --></r:comment>
+    <footer class="footer">
+		<div class="container"> 
+        <r:partial name="layouts/footer__contact--v1" theme="Code" />
+        <r:partial name="layouts/footer__credits--v1" theme="Code" />
+        <r:partial name="layouts/footer__icons--v1" theme="Code" />
+        </div>
+    </footer> 
+    
+    <r:comment><!-- ============================================================= --> </r:comment>
+	<r:comment><!-- ======              Javascript Area / Jquery            ===== --> </r:comment>
+	<r:comment><!-- ============================================================= --> </r:comment>
+    
+    <r:partial name="layouts/browser-update-org--v1" theme="Code" />
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="//code.wvu.edu/public/vendor/jquery/1.10.2/jquery.min.js"><\/script>')</script>
+    
+    <r:include_javascript name="main-ck"/>
+    
+    <r:yield name="page_js">
+  		<r:content />
+	</r:yield>
+	
+
+  </body>
+</html>

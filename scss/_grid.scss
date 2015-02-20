@@ -1,0 +1,37 @@
+// ----------------------------------------
+//   Bourbon Grid Setups 
+// ----------------------------------------
+// If you want to add predefined grid setups similar to bootstrap for use 
+// in the cms later do it in this section
+
+
+@import "_WVUvariables.scss";
+
+$box-sizing:true; 
+$default-layout-direction:LTR;
+
+.wrapper {
+	width:100%; 
+	margin:0 auto; 
+	float:left; 
+} 
+
+.container { 
+	@include outer-container;
+	padding:$padding; 
+	overflow:hidden;
+}
+
+.desktop { 
+	display:none !important; 
+	@include breakpoint(laptop) {
+		display:block !important; 
+	}
+}
+
+.mobile { 
+	display:block !important; 
+	@include breakpoint(laptop) {
+		display:none !important; 
+	}
+}

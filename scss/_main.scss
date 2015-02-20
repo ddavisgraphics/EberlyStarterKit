@@ -1,0 +1,165 @@
+@import "_WVUvariables.scss"; 
+@import "_grid.scss";
+
+//------------------
+//  Eberly Masthead   
+//------------------
+
+.eberly-bar {
+  width:100%;
+  display:block; 
+  float:left;
+  background: $wvu-blue; /* Fallback Color */ 
+  margin:0 auto;
+  @include clearfix;
+  height:43px;
+  }
+
+.eberly-link {
+  @include outer-container;
+  padding:em(10);
+  margin:0 auto;
+  text-align:center;
+  @include clearfix;
+	a { position:relative; text-decoration: none; color:#fff; font-size:em(12); right:em(20); 
+	&:hover,active,visited {color:$wvu-gold; }
+	&:after { position:absolute; top:em(-12); right:em(-60); display:block; float:right; content:''; height:em(60); width:em(60); background: url(../images/wb-ico2.png) no-repeat;}
+	}
+	
+	@include breakpoint(tablet){ 
+		text-align:right;
+		a { right:em(55);}
+		
+	}	
+}
+
+//------------------------
+//  J-Dawgs Code Goes Here   
+//-------------------------
+
+
+
+
+
+
+
+// -----------------------------------
+//     Faculty Page   
+// -----------------------------------
+
+.faculty  { 
+  @include span-columns(12); 
+  padding:12px;
+  margin-bottom: 12px; 
+  img {width:100%; height:auto;}
+  h2 { font-size:1.4em; margin:0; border-bottom:1px solid #ccc;}
+  h3 { font-size:1em; margin:0; } 
+  blockquote {margin:-10px 0 20px; padding:0; font-size:em(12);} 
+  i { width:20px; padding: 0 12px;}  
+  
+  .button { display:block; text-align:center; width:100%; padding:12px; background:lighten($wvu-blue,10%); border: 1px solid $wvu-blue; color:#fff; text-transform:uppercase; text-shadow:1px 1px 4px darken($wvu-blue,10%); 	margin-bottom:24px;  
+  		&:hover,active {color:lighten($pms115,10%); background:$wvu-blue;}}
+  
+  @include breakpoint(tablet) { 
+  	@include span-columns(6); 
+  	@include omega(2n); 
+  }
+  
+  
+  @include breakpoint(laptop) { 
+  	@include span-columns(3); 
+  	&:nth-of-type(2n) { margin-right:2.35765% }
+  	&:nth-of-type(2n + 1) { clear:none; }
+  	@include omega(4n); 
+  }
+}
+
+
+// ------------------------------------
+//      BLOG STUFF 
+// ------------------------------------
+
+main, .main { 
+	width:100%; 
+	padding:$padding/2 0; 
+
+	.articles {
+		@include span-columns(12); 
+		@include breakpoint(laptop) { 
+			@include span-columns(8);
+		}
+	}
+
+	.sidebar {
+			@include span-columns(12); 
+			@include breakpoint(laptop) { 
+				@include span-columns(4);
+				@include omega; 
+				padding-left:$padding;
+			}
+		}
+
+	.pagination { 
+		@include span-columns(12); 
+		float:left; } 
+}
+
+.article { 
+	border: $border; 
+	margin-bottom:$padding;
+	padding-bottom:0;
+	
+	h2 { border-bottom:$border; padding:$padding/4; margin:0;}
+	h2 a { text-decoration:none;} 
+	.credits { border-bottom:$border; @include span-columns(12); 
+		.author { padding:$padding/2; display:inline-block; border-right:$border; @include span-columns(6); } 
+		time { @include span-columns(6); @include omega; padding:$padding/2; text-align:right; }
+	}
+	.article__body { @include span-columns(12); padding:$padding/2; }
+	.button { margin-left:$padding/2;}
+}
+
+.template-blog_article .article { 
+	border:0; 
+	@include span-columns(8); 
+	padding-left:0;
+	.article__body { padding:0 }
+}
+
+// ------------------------------------
+//      Faculty Pages 
+// ------------------------------------
+
+// Index 
+
+.faculty-profiles { 
+	list-style:none; 
+	margin:0;
+	padding:0; } 
+	
+.faculty-member { 
+	@include span-columns(12); 
+	padding:$padding / 2; 
+	background:lighten($light-grey,10%); 
+	border:$border; 
+	margin-bottom:28px;
+	img { width:100%;}
+	h2 { font-size:20px; margin-bottom:0; font-family:$bold; font-weight:bold;} 
+	h3 { font-size:14px; margin-bottom:20px; }
+	p { font-size:14px; margin:0; } 
+    .button { width:100%; display:block; margin:20px 0 0; text-align:center; }
+    
+    @include breakpoint (tablet) { 
+    	@include span-columns(3); 
+    	@include omega(4n); 
+    }
+}
+
+.faculty-sidebar { 
+	margin-bottom: $padding; 
+	padding-right: $padding; 
+	h2 { font-family:$bold; font-weight:bold; } 
+	img { width:100%; height:auto; margin-bottom:$padding/2;  } 
+	p { margin:0; } 
+	border-right: $border; 
+}

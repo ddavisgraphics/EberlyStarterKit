@@ -1,0 +1,80 @@
+---
+layout: default
+---
+<r:content_for name="page_slider"> 
+
+</r:content_for>
+
+<r:content_for name="main"> 
+
+<section class="main-content"> 
+	<div class="container"> 
+		<div class="page-title"> 
+				<h1> <r:page:name /> </h1> 
+			</div> 
+			
+			<div class="breadcrumb"> 
+				<r:breadcrumbs ul_class="breadcrumbs" />
+			</div>  
+	</div> 
+	<div class="container"> 
+		<aside class="sidebar"> 
+		<div class="faculty-sidebar"> 
+			<r:editable_region name="faculty-photo" />
+			<p class="faculty-phone"> <span class="fa fa-phone-square"> </span>  
+				<r:editable_region name="faculty-phone" type="simple">  
+					 Office Phone Number				
+				</r:editable_region> 
+			</p> 	
+			<p class="faculty-address"> <span class="fa fa-map-marker"> </span>  
+				<r:editable_region name="faculty-address" type="simple">  
+					 Office Number and Building				
+				</r:editable_region> 
+			</p> 	
+			<p class="faculty-email"> <span class="fa fa-envelope-o"> </span>  
+				<r:editable_region name="faculty-email" type="simple">  
+					University Email 	
+				</r:editable_region> 
+			</p> 	
+		</div> 
+			
+			<h2> Faculty Pages </h2> 
+			<r:ancestor_menu ul_class="sub-menu" start_depth="2" max_depth="3" active_class="active" open_class="open" />
+		</aside> 
+		
+		<article class="content"> 
+			
+			<div class="content-zone"> 
+				<h2 class="faculty-name"> 
+					<r:editable_region name="faculty-name" type="simple">  
+						 Faculty or Staff Name					
+					</r:editable_region> 
+				</h2> 
+				
+				<h3 class="faculty-position"> 
+					<r:editable_region name="faculty-position" type="simple">  
+						 Job Title or Position 	
+					</r:editable_region> 
+				</h3> 
+				
+				<h3 class="faculty-position"> 
+					<r:editable_region name="named-faculty-position" type="simple">  
+						Named Position 
+					</r:editable_region> 
+				</h3> 
+				
+				<p class="faculty-blurb"> 
+					<r:editable_region name="faculty-blurb">  
+						 Please type a description or details about the faculty here, can have any normal content in this box. 					
+					</r:editable_region> 
+				</p> 
+
+				
+			</div> 
+			
+		</article> 
+
+	</div> 
+</section> 
+	
+</r:content_for>

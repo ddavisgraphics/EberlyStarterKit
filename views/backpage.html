@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<r:content_for name="page_slider"> 
+
+</r:content_for>
+
+<r:content_for name="main"> 
+
+<section class="main-content"> 
+	<div class="container"> 
+		<div class="page-title"> 
+				<h1> <r:page:name /> </h1> 
+			</div> 
+			
+			<div class="breadcrumb"> 
+				<r:breadcrumbs ul_class="breadcrumbs" />
+			</div>  
+	</div> 
+	<div class="container"> 
+		<aside class="sidebar"> 
+			<r:ancestor_menu ul_class="sub-menu" start_depth="2" max_depth="3" active_class="active" open_class="open" />
+			<r:editable_region name="relatedlinks" />
+			<r:editable_region name="extracontent" />
+		</aside> 
+		
+		<article class="content"> 
+			
+			<div class="content-zone"> 
+				<r:editable_region name="main_content" />
+			</div> 
+			
+		</article> 
+
+	</div> 
+</section> 
+	
+</r:content_for>
+
+
+
+

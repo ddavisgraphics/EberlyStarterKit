@@ -1,0 +1,124 @@
+---
+layout: default
+---
+    
+<r:content_for name="page_slider"> 
+	<div class="slider">
+		<div class="container">
+
+			<div class="flexslider">
+
+				<ul class="slides">
+				 <r:get_page id="3146">
+					<r:children:each>
+						<li>
+							<div class="slider-image">
+							  <r:page:content name="slider-image" />
+							</div> <!-- /.profiles__individual -->
+
+							<div class="slider-content">
+							  <h3><r:page:content name="article-title" /></h3>
+							  <p><r:page:content name="article-description" /></p>
+							  <a class="button" href="<r:page:content name="article-url" />">Read More</a>
+							</div> <!-- /.profiles__individual-description -->
+						</li>
+					</r:children:each>
+					</r:get_page> 
+				</ul>
+
+			</div>
+
+		</div> <!-- /.container -->
+	</div>
+
+</r:content_for>
+
+<r:content_for name="main"> 
+		
+		<section class="main wrapper"> 
+			<div class="container"> 
+				<div class="student-faculty"> 
+					<h2> <r:editable_region name="blurb-title" type="simple" /> </h2> 
+					<r:editable_region name="main-blurb" />
+				</div> 
+				
+				<div class="news-events"> 
+					<div class="accordion feed1">
+						<dl>
+							<dt><a class="accordionTitle" href="#"> <r:editable_region name="accordion_title_1" type="simple" /> <i class="fa fa-plus"></i></a></dt>
+							<dd class="accordionItem accordionItemCollapsed">
+								<r:editable_region name="accordion_1" />
+							</dd>
+							<dt><a class="accordionTitle" href="#"> <r:editable_region name="accordion_title_2" type="simple" /> <i class="fa fa-plus"></i></a></dt>
+							<dd class="accordionItem accordionItemCollapsed">
+								<r:editable_region name="accordion_2" />
+							</dd>
+							<dt><a class="accordionTitle" href="#"><r:editable_region name="accordion_title_3" type="simple" /> <i class="fa fa-plus"></i></a></dt>
+							<dd id="cal" class="accordionItem accordionItemCollapsed">
+								<script language="javascript" src="http://cal.wvu.edu/EventListSyndicator.aspx?type=N&number=4&category=37-0%2c37-27%2c37-28%2c37-34&ics=Y&adpid=22&nem=No+events+are+available+that+match+your+request&sortorder=ASC"></script>
+							</dd>
+						</dl>
+					</div>  
+				</div> 
+				
+				
+			</div> 
+		</section> 
+		
+		<section class="wrapper">
+		<div class="container">  
+		
+
+	<div class="card">
+			<div class="card-image"> <r:editable_region name="card-image" /> </div>
+			<div class="card-header">
+				<h2> <r:editable_region name="card-header" type="simple" /> </h2> 
+			</div>
+			<div class="card-copy">
+				<p><r:editable_region name="card-copy" /></p> 	
+			</div>
+			<div class="card-links">
+				<r:editable_region name="card-links" />
+			</div>
+		</div>
+
+	<div class="card">
+			<div class="card-image"> <r:editable_region name="card-image2" /> </div>
+			<div class="card-header">
+				<h2> <r:editable_region name="card-header2" type="simple" /> </h2> 
+			</div>
+			<div class="card-copy">
+				<p><r:editable_region name="card-copy2" /></p> 	
+			</div>
+			<div class="card-links">
+				<r:editable_region name="card-links2" />
+			</div>
+		</div>
+
+	<div class="card">
+			<div class="card-image"> <r:editable_region name="card-image3" /> </div>
+			<div class="card-header">
+				<h2> <r:editable_region name="card-header3" type="simple" /> </h2> 
+			</div>
+			<div class="card-copy">
+				<p><r:editable_region name="card-copy3" /></p> 	
+			</div>
+			<div class="card-links">
+				<r:editable_region name="card-links3" />
+			</div>
+		</div>
+
+		
+		</div> 
+		</section> 
+
+</r:content_for>
+
+<r:content_for name="page_js">
+ 	<script src="//cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/jquery.flexslider.js"></script>
+ 	<script>
+	$(window).load(function() {
+		$('.flexslider').flexslider({animation:"fade", randomize: true, controlNav: true, slideshow: true, slideshowSpeed: 7000, animationDuration: 600, pauseOnHover: true });
+	});
+</script>
+</r:content_for>

@@ -1,0 +1,161 @@
+// -----------------------------------------
+// Color Pallet  
+// -----------------------------------------
+
+// PRIMARY PALETTE
+$wvu-blue: #002855; 
+$wvu-gold: #eaaa00;
+
+//  NEUTRAL PALETTE
+$black: #2c2a29; 
+$pms432: #333F48; 
+$pms429: #A2AAAD; 
+$pmswarm11: #6e6259; 
+$pmswarm7: #968c83; 
+$pmswarm3: #bfb8af; 
+
+// ACCENT PALETTE 
+$pms286: #0033A0; 
+$pms300: #005EB8; 
+$pms629: #9BD3DD;
+$pms7554: #4b3D2A; 
+$pms7557: #9f7d23;
+$pms144: #ed8b00; 
+$pms7476: #0d5257; 
+$pms5625: #708573;
+$pms558: #9ABEAA; 
+$pms180: #BE3A34;
+$pms166: #E35205;
+pms115: #FDDA24;
+
+// OTHER WEB COLORS 
+$light-red: #FBE3E4;
+$light-green: #E6EFC2;
+
+// BORDER COLORS 
+$border-color: $pms429; 
+
+
+// ---------------------------------------------------
+// Breakpoint for Responsive Web Design (Mobile First)
+// ---------------------------------------------------
+
+@mixin breakpoint($break) {
+	@if $break == phone { 
+		@media (min-width: 30em) { @content; }
+	}
+	@if $break == tablet {
+        @media (min-width: 48em) { @content; }
+    }
+    @if $break == laptop {
+        @media (min-width: 60em) { @content; }
+    }
+    @if $break == desktop {
+        @media (min-width: 80em) { @content; }
+    }
+    @else { 
+    	@media (min-width: $break) { @content; }
+    }
+}
+
+// -----------------------------------------
+// Functions for Button Colors  
+// -----------------------------------------
+
+@function button-text-color($btn-color) {
+  @if (lightness( $btn-color ) > 48) {
+    @return #000;
+  }
+  @else {
+    @return #fff;
+  }
+}
+
+// -----------------------------------------
+// Common Variables for Sitewide Elements 
+// -----------------------------------------
+
+// Layout Issues 
+$max-width: em(1280);  
+$background-color: #fff;
+$base-unit: 8px;
+
+// Fonts Colors
+$font-color: darken($pms432,5); 
+$link-color: $pms286; 
+$link-hover: darken($link-color,20);
+$link-other: invert($link-color);
+
+// Colors For Template 
+$base-color: $pms300; 
+$accent-color:$wvu-gold; 
+
+// Alerts 
+$warning: lighten($pms115,10%); 
+$error: $light-red; 
+$success: $light-green; 
+
+@mixin opac-color($some-color) { 
+	background:$some-color; 
+	background:rgba($some-color,.5); 
+}
+
+
+// Fonts
+$default-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+$serif: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", Georgia, serif;
+$bold:"HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; 
+$thin: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif; 
+$form-font:'ABeeZee', sans-serif; // only works with Imported google font  
+
+// Font Attributes
+$default-font-weight:300; 
+$default-font-size: 1em; 
+$line-height:1.618;
+$header-line-height:1.2; 
+$default-letter-spacing:2px; 
+
+// Font Sizes 
+$h1-size: $default-font-size * 2;
+$h2-size: $default-font-size * 1.8;
+$h3-size: $default-font-size * 1.6;
+$h4-size: $default-font-size * 1.4;
+$h5-size: $default-font-size * 1.2;
+$h6-size: $default-font-size;
+
+// Padding, Margin, Border Radius 
+$default-border-radius: 5px;
+$padding: $base-unit * 2; 
+$base-z-index: 0;
+$border: 1px solid $border-color; 
+$border-bottom: 1px solid $border-color; 
+
+// Extends 
+
+.button {
+ -webkit-font-smoothing: antialiased;
+  border-radius: $default-border-radius;
+  background:$link-color;
+  color:button-text-color($link-color);
+  display: inline-block;
+  font-size: $default-font-size;
+  font-weight: bold;
+  line-height: 1;
+  padding:$padding / 2;
+  text-decoration:none;
+  margin-bottom:20px;
+ 
+  &:hover {
+      background:$link-hover;
+      color:button-text-color($link-hover);
+      text-decoration:underline;
+  } &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,34 @@
+---
+layout: default
+---
+    
+<r:content_for name="main"> 
+
+<div class="wrapper">
+  <div class="main-container container">
+
+    <r:breadcrumbs ul_class="breadcrumbs" />
+
+    <div class="intro_photo">
+      <r:editable_region name="slider-image">
+        Add a photo.
+      </r:editable_region>
+    </div> <!-- /.staff__photo -->
+    
+    <div class="intro_description">
+      <strong>Name: </strong><br>
+      <h3><r:editable_region name="article-title" type="simple">
+        Add a name.
+      </r:editable_region></h3>
+      <p><strong>Description: </strong><br><r:editable_region name="article-description" type="simple">
+        Add a description.
+      </r:editable_region></p>
+      <p><strong>Link: </strong><br><r:editable_region name="article-url" type="simple">
+        Add a url to link to.
+      </r:editable_region></p>
+    </div> <!-- /.staff__photo -->
+
+  </div> <!-- /.container -->
+</div> <!-- /.u-full-width -->
+
+</r:content_for>

@@ -1,0 +1,193 @@
+@import "_WVUvariables.scss";
+
+body { 
+	@include fontfamily; 
+	font-size: golden-ratio(1em,  0);
+	line-height: 1.618;
+    letter-spacing:1px;
+    margin:0; 
+    color:#333;
+}
+
+
+h1,h2,h3,h4,h5,h6 { 
+	 margin: 10px 0 18px; 
+	 font-weight:300;
+}
+
+h1 {
+  font-size: golden-ratio(1.2em,  1);
+  color:$pms432; 
+  margin: 0 0 18px;
+}
+
+h2 {
+  font-size: golden-ratio(1.1em,  1);
+  color:$wvu-blue;
+}
+
+h3 {
+  font-size: golden-ratio(1.4em, 0);
+  color:$grey-blue;
+}
+
+h4 {
+  font-size: golden-ratio(1em,  0);
+  color:$wvu-blue;
+}
+
+h5 {
+ font-size: golden-ratio(1em,  1);
+  color:#000; 
+}
+
+h6 {
+  font-size: 1.1428571428571428em;
+  font-size: golden-ratio(1em,  1);
+  color:#000; 
+}
+
+p {
+     /* Non standard for webkit */
+    word-wrap: break-word;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+    margin-bottom: 1.5em;
+}
+
+blockquote {
+	font-size: 1.2em;
+	text-transform:none;
+	letter-spacing:1px;
+	line-height: 1.5em;
+    margin-bottom: 1.5em;
+	color: $middle-grey;
+	p { padding:0; margin:0;}
+}
+
+ul,ol {
+    margin-bottom: 18px;
+    padding: 0 0 0 60px;
+}
+
+li ul { margin-top:18px;} 
+li ol { margin-top:18px;} 
+
+a {
+    color: $linkcolor;
+    text-decoration: none;
+    text-decoration: none;
+	&:hover { color:$linkhover; } 
+	&:active { text-decoration: none;}
+	&:focus {
+   		outline-color: invert;
+		outline-style: dotted;
+		outline-width: 1px;
+		color:$linkhover; 
+		}
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ul ul {
+    list-style-type: circle;
+    margin-bottom: 0;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ol li, ul li, li {
+    margin-bottom:15px;
+}
+
+ol ol {
+    list-style-type: lower-alpha;
+    margin-bottom: 0;
+}
+
+acronym,abbr {
+    font-variant: small-caps;
+}
+
+ins {
+    text-decoration: underline;
+}
+
+p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,blockquote {
+    vertical-align: baseline;
+}
+
+b, strong, ins { font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; font-weight:600; font-stretch:normal; }
+
+cite, em, i { font-style: italic; }
+
+pre {
+	width:60%;
+    background-color:$light-grey;
+    background-repeat:repeat;
+    font-family: "Courier New",Courier,monospace;
+    color:#333;
+    border-left:4px solid #666;
+    position:relative;
+    padding:10px 0;
+    margin-left:20px;
+    overflow:auto;
+    word-wrap:normal;
+    white-space:pre;
+    box-shadow:0 1px 2px rgba(0,0,0,0.2);
+    position:relative;
+    code { display:inline-block; margin:0; padding:10px; margin-top:-15px; margin-left:20px; } 
+}
+
+pre[data-codetype] {
+    padding:29px 1em 7px 1em;
+}
+pre[data-codetype]:before {
+    content:attr(data-codetype);
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    background-color:#666;
+    padding:0 7px;
+    font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; font-weight:600; font-stretch:normal; 
+    color:white;
+}
+
+pre[data-codetype="HTML"]       {border-color:#0B7E88;color:#08464B;}
+pre[data-codetype="CSS"]        {border-color:#7B990C;color:#4B5D08;}
+pre[data-codetype="JavaScript"] {border-color:#545448;color:#1F2E24;}
+pre[data-codetype="JQuery"]     {border-color:#395540;color:#2E2E27;}
+pre[data-codetype="PHP"]        {border-color:#FF9900;color:#865003;}
+pre[data-codetype="XML"]        {border-color:#FF0C39;color:#790015;}
+
+pre[data-codetype="HTML"]:before          {background-color:#0B7E88;}
+pre[data-codetype="CSS"]:before           {background-color:#7B990C;}
+pre[data-codetype="JavaScript"]:before    {background-color:#545448;}
+pre[data-codetype="JQuery"]:before        {background-color:#395540;}
+pre[data-codetype="PHP"]:before           {background-color:#FF9900;}
+pre[data-codetype="XML"]:before           {background-color:#FF0C39;}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: 1.5em;
+	margin: 0;
+	outline: none;
+	padding: 0;
+	-webkit-appearance: none;
+}
